@@ -11,7 +11,7 @@ Easy to use custom retry method implementation.
 ### Example
 
 ```java
-MyResponse myResponse=new RetryUtils<MyResponse>().retry(()->myService.getById(id),
+MyResponse myResponse= new RetryUtils<MyResponse>().retry(()->myService.getById(id),
         "myCustomLogInfo",
         retryCount,
         Arrays.asList(StatusRuntimeException.class,Errors.NativeIoException.class),
